@@ -19,7 +19,7 @@ def update_statistics(value):
     n2, mean2, std2, q1_2, median2, q3_2, iqr2 = get_stats(stats_df2)
     f_std1 = u"\u00B1" + str(std1)
     f_std2 = u"\u00B1" + str(std2)
-    return [html.Thead([html.Th(children=[f"Descriptive statistics: {value}"], className="right"),
+    return [html.Thead([html.Th(children=[f"Variable: {value}"], className="right"),
                         html.Th(children=[f"{group1}"]),
                         html.Th(children=["Key"])]),
             html.Tr([html.Td(children=["Sample size:"], className="right"),
@@ -43,30 +43,30 @@ def update_statistics(value):
             html.Tr([html.Td(children=["Interquartile range:"], className="right"),
                      html.Td(children=[f"{iqr1}"]),
                      html.Td(children=[])])],\
-        [html.Thead([html.Th(children=[f"Descriptive statistics: {value}"], className="right"),
-                     html.Th(children=[f"{group2}"]),
-                     html.Th(children=["Key"])]),
-         html.Tr([html.Td(children=["Sample size:"], className="right"),
-                  html.Td(children=[f"{n2}"])]),
-         html.Td(children=[]),
-         html.Tr([html.Td(children=["Mean:"], className="right"),
-                  html.Td(children=[f"{mean2}"]),
-                  html.Td(html.Span(className="mean-key"))]),
-         html.Tr([html.Td(children=["Median:"], className="right"),
-                  html.Td(children=[f"{median2}"]),
-                  html.Td(html.Span(className="median-key"))]),
-         html.Tr([html.Td(children=["Standard deviation:"], className="right"),
-                  html.Td(children=[f_std2]),
-                  html.Td(html.Span(className="std-key"))]),
-         html.Tr([html.Td(children=["First quartile (Q1):"], className="right"),
-                  html.Td(children=[f"{q1_2}"]),
-                  html.Td(html.Span(className="q1-key"))]),
-         html.Tr([html.Td(children=["Third quartile (Q3):"], className="right"),
-                  html.Td(children=[f"{q3_2}"]),
-                  html.Td(html.Span(className="q3-key"))]),
-         html.Tr([html.Td(children=["Interquartile range:"], className="right"),
-                  html.Td(children=[f"{iqr2}"]),
-                  html.Td(children=[])])]
+            [html.Thead([html.Th(children=[f"Variable: {value}"], className="right"),
+                        html.Th(children=[f"{group2}"]),
+                        html.Th(children=["Key"])]),
+            html.Tr([html.Td(children=["Sample size:"], className="right"),
+                    html.Td(children=[f"{n2}"])]),
+            html.Td(children=[]),
+            html.Tr([html.Td(children=["Mean:"], className="right"),
+                    html.Td(children=[f"{mean2}"]),
+                    html.Td(html.Span(className="mean-key"))]),
+            html.Tr([html.Td(children=["Median:"], className="right"),
+                    html.Td(children=[f"{median2}"]),
+                    html.Td(html.Span(className="median-key"))]),
+            html.Tr([html.Td(children=["Standard deviation:"], className="right"),
+                    html.Td(children=[f_std2]),
+                    html.Td(html.Span(className="std-key"))]),
+            html.Tr([html.Td(children=["First quartile (Q1):"], className="right"),
+                    html.Td(children=[f"{q1_2}"]),
+                    html.Td(html.Span(className="q1-key"))]),
+            html.Tr([html.Td(children=["Third quartile (Q3):"], className="right"),
+                    html.Td(children=[f"{q3_2}"]),
+                    html.Td(html.Span(className="q3-key"))]),
+            html.Tr([html.Td(children=["Interquartile range:"], className="right"),
+                    html.Td(children=[f"{iqr2}"]),
+                    html.Td(children=[])])]
 
 
 def format_histogram(df, fig):
@@ -283,5 +283,5 @@ def button_text(n_clicks):
 
 
 if __name__ == "__main__":
-    app.run(debug=False, host="0.0.0.0", port=8080, dev_tools_ui=False)
-    # app.run(debug=True)
+    # app.run(debug=False, host="0.0.0.0", port=8080, dev_tools_ui=False)
+    app.run(debug=True)

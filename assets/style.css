@@ -79,10 +79,9 @@ th.right {
 .row {
     margin: 20px
 }
-#results-div {
-    border: 1px var(--charcoal) solid;
+.card {
+    margin: 10px;
 }
-
 /* Buttons */
 .button {
     margin: 10px;
@@ -96,7 +95,7 @@ th.right {
 /*  Descriptive statistics toggle - DIS */
 #collapse1, #collapse2 {
     margin: 0 auto;
-    max-width: 420px;
+    /* max-width: 420px; */
 }
 
 /* Labels */

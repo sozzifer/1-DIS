@@ -21,7 +21,7 @@ app.layout = dbc.Container([
                                       for x in happy_df.columns[1:]],
                              value="Sex")
             ], **{"aria-live": "polite"})
-        ], xs=6, sm=6, md=3, lg=3, xl=3)
+        ], xs=7, sm=6, md=4, lg=3)
     ], justify="center"),
     dbc.Row([
         dbc.Col([
@@ -30,7 +30,7 @@ app.layout = dbc.Container([
                        children=[],
                        class_name="button",
                        style={"margin": "0 auto"})
-        ], xs=8, sm=8, md=5, lg=4, xl=4, className="d-flex justify-content-center")
+        ], xs=8, md=5, lg=4, className="d-flex justify-content-center")
     ], justify="center"),
     dbc.Row([
         dbc.Col([
@@ -40,13 +40,13 @@ app.layout = dbc.Container([
                         dbc.CardBody([
                             html.Table(id="desc1",
                                        className="descriptive",
-                                       children=["Hide Descriptive statistics"],
+                                       children=[],
                                        **{"aria-live": "polite"})
                         ])
                     ], id="card1")
                 ])
             ], id="collapse1", is_open=True)
-        ], xs=12, sm=12, md=6, lg=6, xl=4),
+        ], xs=12, md=6, xl=5),
         dbc.Col([
             dbc.Collapse([
                 html.Div([
@@ -60,7 +60,7 @@ app.layout = dbc.Container([
                     ], id="card2")
                 ])
             ], id="collapse2", is_open=True)
-        ], xs=12, sm=12, md=6, lg=6, xl=4)
+        ], xs=12, md=6, xl=5)
     ], justify="center"),
     dbc.Row([
         dbc.Col([
@@ -76,7 +76,7 @@ app.layout = dbc.Container([
                      children=[],
                      className="sr-only",
                      **{"aria-live": "polite"})
-        ], xs=12, sm=12, md=6, lg=6, xl=4),
+        ], xs=12, md=6, xl=5),
         dbc.Col([
             html.Div([
                 dcc.Graph(id="graph-hist2",
@@ -90,7 +90,7 @@ app.layout = dbc.Container([
                      children=[],
                      className="sr-only",
                      **{"aria-live": "polite"})
-        ], xs=12, sm=12, md=6, lg=6, xl=4)
+        ], xs=12, md=6, xl=5)
     ], justify="center"),
     dbc.Row([
         dbc.Col([
@@ -106,7 +106,7 @@ app.layout = dbc.Container([
                      children=[],
                      className="sr-only",
                      **{"aria-live": "polite"})
-        ], xs=12, sm=12, md=6, lg=6, xl=4),
+        ], xs=12, md=6, xl=5),
         dbc.Col([
             html.Div([
                 dcc.Graph(id="graph-box2",
@@ -120,6 +120,6 @@ app.layout = dbc.Container([
                      children=[],
                      className="sr-only",
                      **{"aria-live": "polite"})
-        ], xs=12, sm=12, md=6, lg=6, xl=4)
+        ], xs=12, md=6, xl=5)
     ], justify="center")
 ], fluid=True)
