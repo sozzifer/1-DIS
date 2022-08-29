@@ -10,14 +10,6 @@ app = Dash(__name__,
                        "content": "width=device-width, initial-scale=1.0, maximum-scale=1.0"}])
 
 app.layout = dbc.Container([
-    # dbc.Row([
-    #     html.H1("Summarising and illustrating data")
-    # ]),
-    # dbc.Row([
-    #     dbc.Col([
-    #         html.P("The Happy data set contains 1170 responses to a questionnaire about students' levels of happiness on a scale of 0 to 28, as well as the student's sex, if they are a UK student or not, and whether they consider themselves to be extroverted/introverted, absorbed and bored. Select a categorical variable from the dropdown list below to compare total happiness for different groups.")
-    #     ], xs=12, sm=12, md=12, lg=10, xl=10)
-    # ], justify="center"),
     dbc.Row([
         dbc.Col([
             html.Div([
