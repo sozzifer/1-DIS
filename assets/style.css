@@ -102,23 +102,11 @@ th.right {
 .descriptive {
     margin: 0 auto;
 }
-.desc-header p {
+.desc-header {
     display: inline-flex;
     text-align: center;
     font-weight: bold;
     padding: 0 0 10px;
-}
-.desc-body {
-    display: inline-flex;
-    text-align: left;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-.desc-body-r {
-    text-align: right;
-    padding: 0 5px 0 0;
-    font-weight: bold;
 }
 
 /* Labels */

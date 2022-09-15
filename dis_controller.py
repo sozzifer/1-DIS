@@ -19,49 +19,55 @@ def update_statistics(value):
     n1, mean1, std1, q1_1, median1, q3_1, iqr1 = get_stats(stats_df1)
     n2, mean2, std2, q1_2, median2, q3_2, iqr2 = get_stats(stats_df2)
     return [html.Div([
-                html.P(f"Descriptive statistics for {value} = {group1}")
+                html.P(f"Descriptive statistics for {value} = {group1}", **{"aria-live": "polite"})
             ], className="desc-header"),
             html.Div([
-                html.Div([
-                    html.P("Sample size:"),
-                    html.P("Mean:"),
-                    html.P("Median:"),
-                    html.P("Standard deviation (SD):"),
-                    html.P("First quartile (Q1):"),
-                    html.P("Third quartile (Q3):"),
-                    html.P("Interquartile range:")
-                ], className="desc-body-r"), 
-                html.Div([
-                    html.P(f"{n1}"),
-                    html.P(f"{mean1}"),
-                    html.P(f"{median1}"),
-                    html.P(f"\u00B1{std1}"),
-                    html.P(f"{q1_1}"),
-                    html.P(f" {q3_1}"),
-                    html.P(f"{iqr1}")])
-            ], className="desc-body")],\
+                html.Label("Sample size:", htmlFor="n1", className="bold-p"),
+                html.Span(f" {n1}", id="n1", **{"aria-live": "polite"}),
+                html.Br(),
+                html.Label("Mean:", htmlFor="mean1", className="bold-p"),
+                html.Span(f" {mean1}", id="mean1", **{"aria-live": "polite"}),
+                html.Br(),
+                html.Label("Median:", htmlFor="median1", className="bold-p"),
+                html.Span(f" {median1}", id="median1", **{"aria-live": "polite"}),
+                html.Br(),
+                html.Label("Standard deviation (SD):", htmlFor="std1", className="bold-p"),
+                html.Span(f" \u00B1{std1}", id="std1", **{"aria-live": "polite"}),
+                html.Br(),
+                html.Label("First quartile (Q1):", htmlFor="q1_1", className="bold-p"),
+                html.Span(f" {q1_1}", id="q1_1", **{"aria-live": "polite"}),
+                html.Br(),
+                html.Label("Third quartile (Q3):", htmlFor="q3_1", className="bold-p"),
+                html.Span(f" {q3_1}", id="q3_1", **{"aria-live": "polite"}),
+                html.Br(),
+                html.Label("Interquartile range:", htmlFor="iqr1", className="bold-p"),
+                html.Span(f" {iqr1}", id="iqr1", **{"aria-live": "polite"})
+            ], style={"text-align": "right"})],\
             [html.Div([
-                html.P(f"Descriptive statistics for {value} = {group2}")
+                html.P(f"Descriptive statistics for {value} = {group2}", **{"aria-live": "polite"})
             ], className="desc-header"),
             html.Div([
-                html.Div([
-                    html.P("Sample size:"),
-                    html.P("Mean:"),
-                    html.P("Median:"),
-                    html.P("Standard deviation:"),
-                    html.P("First quartile (Q1):"),
-                    html.P("Third quartile (Q3):"),
-                    html.P("Interquartile range:")
-                ], className="desc-body-r"), 
-                html.Div([
-                    html.P(f"{n2}"),
-                    html.P(f"{mean2}"),
-                    html.P(f"{median2}"),
-                    html.P(f"\u00B1{std2}"),
-                    html.P(f"{q1_2}"),
-                    html.P(f" {q3_2}"),
-                    html.P(f"{iqr2}")])
-            ], className="desc-body")]
+                html.Label("Sample size:", htmlFor="n2", className="bold-p"),
+                html.Span(f" {n2}", id="n2", **{"aria-live": "polite"}),
+                html.Br(),
+                html.Label("Mean:", htmlFor="mean2", className="bold-p"),
+                html.Span(f" {mean2}", id="mean2", **{"aria-live": "polite"}),
+                html.Br(),
+                html.Label("Median:", htmlFor="median2", className="bold-p"),
+                html.Span(f" {median2}", id="median2", **{"aria-live": "polite"}),
+                html.Br(),
+                html.Label("Standard deviation (SD):", htmlFor="std2", className="bold-p"),
+                html.Span(f" \u00B1{std2}", id="std2", **{"aria-live": "polite"}),
+                html.Br(),
+                html.Label("First quartile (Q1):", htmlFor="q1_2", className="bold-p"),
+                html.Span(f" {q1_2}", id="q1_2", **{"aria-live": "polite"}),
+                html.Br(),
+                html.Label("Third quartile (Q3):", htmlFor="q3_2", className="bold-p"),
+                html.Span(f" {q3_2}", id="q3_2", **{"aria-live": "polite"}),
+                html.Br(),
+                html.Label("Interquartile range:", htmlFor="iqr2", className="bold-p"),
+                html.Span(f" {iqr2}", id="iqr2", **{"aria-live": "polite"})
+            ], style={"text-align": "right"})]
 
 
 # Add descriptive statistics line graphs to histograms (mean, median, Q1, Q3, +-1SD)
