@@ -1,17 +1,19 @@
 import pandas as pd
 
+# Generate dataframe from csv
 happy_df = pd.read_csv("data/dis_happy.csv")
 
+# Colour palette
 stat_colours = {
     "grp1": "#d10373",
     "grp2": "#9eab05",
     "mean": "#f49103",
     "median": "#006338",
     "std": "#0085a1",
-    "quartile": "#c70540"
+    "quartile": "#6a2150"
 }
 
-
+# Filter dataframe based on dropdown user selection
 def get_df(value):
     df = happy_df[["Total happiness", value]].dropna().reset_index(drop=True)
     categories = df[value].unique()
@@ -19,7 +21,7 @@ def get_df(value):
     df2 = df["Total happiness"][(df[value] == categories[1])]
     return categories, df1, df2
 
-
+# Summary statistics for filtered dataframe
 def get_stats(df):
     n = df.size
     mean = round(df.mean(), 3)

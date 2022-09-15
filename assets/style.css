@@ -57,6 +57,7 @@ p {
     font-family: "SemiBold", sans-serif;
 }
 
+
 /* Tables */
 table {
     margin: 0 auto;
@@ -79,9 +80,7 @@ th.right {
 .row {
     margin: 20px
 }
-.card {
-    margin: 10px;
-}
+
 /* Buttons */
 .button {
     margin: 10px;
@@ -92,10 +91,34 @@ th.right {
     background-color: var(--blue);
     box-shadow: 0 0 0 0.2rem rgba(0, 56, 150, 0.5);
 }
-/*  Descriptive statistics toggle - DIS */
+/*  Descriptive statistics cards - DIS */
 #collapse1, #collapse2 {
     margin: 0 auto;
-    /* max-width: 420px; */
+}
+.card {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.descriptive {
+    margin: 0 auto;
+}
+.desc-header p {
+    display: inline-flex;
+    text-align: center;
+    font-weight: bold;
+    padding: 0 0 10px;
+}
+.desc-body {
+    display: inline-flex;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.desc-body-r {
+    text-align: right;
+    padding: 0 5px 0 0;
+    font-weight: bold;
 }
 
 /* Labels */
@@ -118,31 +141,13 @@ input:invalid {
 .form-select.is-invalid {
     border-color: var(--pink);
 }
-/* Graph key - DIS */
-.mean-key {
-    border-top: 3px solid var(--gold);
-    display: block;
-    width: 30px
-}
-.median-key {
-    border-top: 3px solid var(--green);
-    display: block;
-    width: 30px
-}
-.std-key {
-    border-top: 3px solid var(--aqua);
-    display: block;
-    width: 30px
-}
-.q1-key, .q3-key {
-    border-top: 3px solid var(--red);
-    display: block;
-    width: 30px
+
+/* Graph formatting - DIS */
+.dis-graph {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-#graph-hist1, #graph-hist2, #graph-box1, #graph-box2 {
-    max-width: 600px
-}
 /* Screen reader alt text for graphs with role=img */
 .sr-only {
     position: absolute;
